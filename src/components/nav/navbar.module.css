@@ -1,0 +1,15 @@
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading {
+  font-family: "font_one_bold";
+  text-transform: capitalize;
+  color: #003b40;
+}
+
+.profile {
+  max-width: 50px;
+  border-radius: 50%;
+}

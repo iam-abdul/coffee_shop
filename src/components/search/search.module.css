@@ -1,0 +1,23 @@
+.searchBar {
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+.searchBar div {
+  width: 100%;
+}
+
+.searchBar .filterIcon {
+  align-self: stretch;
+  background-color: #003b40;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+.searchBar svg {
+  margin: 0 20px;
+  color: #fefefe;
+  height: 100%;
+}

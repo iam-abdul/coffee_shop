@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "font_one";
+  src: url("./assets/fonts/Sk-Modernist-Regular.otf");
+}
+
+@font-face {
+  font-family: "font_one_bold";
+  src: url("./assets/fonts/Sk-Modernist-Bold.otf");
+}
+
+@font-face {
+  font-family: "font_one_mono";
+  src: url("./assets/fonts/Sk-Modernist-Mono.otf");
+}
+
+body {
+  font-family: "font_one";
+}
