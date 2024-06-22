@@ -2,7 +2,9 @@ import React from "react";
 import classes from "./shopCard.module.css";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export interface IShopData {
+  id: string;
   name: string;
   image: string;
   total_ratings: number;
@@ -18,16 +20,25 @@ function abbreviateNumber(num: number) {
   if (num >= 1e12) return +(num / 1e12).toFixed(1) + "T"; // Trillions
 }
 const ShopCard: React.FunctionComponent<IShopData> = ({
+  id,
   name,
   image,
   total_ratings,
   rating,
   distance,
 }) => {
+  const navigate = useNavigate();
+  const openDetailedView = () => {
+    console.log("clicked to nav");
+    navigate("/shop/" + id);
+  };
+
   return (
-    <div className={classes.parent}>
+    <div onClick={openDetailedView} className={classes.parent}>
       <div className={classes.imageContainer}>
-        <img src={image} alt="" />
+        <div className={classes.frame}>
+          <img src={image} alt="" />
+        </div>
         <div className={classes.fav}>
           <FaRegHeart size={16} />
         </div>

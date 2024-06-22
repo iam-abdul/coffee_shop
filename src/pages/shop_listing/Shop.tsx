@@ -7,6 +7,7 @@ import { IShopData } from "../../components/shop/ShopCard";
 const Shops: React.FunctionComponent = () => {
   const shopData: IShopData[] = [
     {
+      id: "1",
       name: "Home Coffee Roasters",
       image:
         "https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -15,6 +16,7 @@ const Shops: React.FunctionComponent = () => {
       distance: 3.9,
     },
     {
+      id: "2",
       name: "filter coffee",
       image:
         "https://images.unsplash.com/photo-1497636577773-f1231844b336?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -24,6 +26,7 @@ const Shops: React.FunctionComponent = () => {
     },
 
     {
+      id: "3",
       name: "filter coffee",
       image:
         "https://plus.unsplash.com/premium_photo-1664970900401-0756aa4d8459?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -32,6 +35,7 @@ const Shops: React.FunctionComponent = () => {
       distance: 2,
     },
     {
+      id: "4",
       name: "filter coffee",
       image:
         "    https://images.unsplash.com/photo-1514066558159-fc8c737ef259?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -41,6 +45,7 @@ const Shops: React.FunctionComponent = () => {
     },
 
     {
+      id: "5",
       name: "filter coffee",
       image:
         "https://images.unsplash.com/photo-1610632380989-680fe40816c6?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -50,6 +55,7 @@ const Shops: React.FunctionComponent = () => {
     },
 
     {
+      id: "6",
       name: "filter coffee",
       image:
         "    https://images.unsplash.com/photo-1559496417-e7f25cb247f3?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -69,6 +75,7 @@ const Shops: React.FunctionComponent = () => {
           {shopData.map((el, i) => {
             return (
               <ShopCard
+                id={el.id}
                 distance={el.distance}
                 name={el.name}
                 total_ratings={el.total_ratings}

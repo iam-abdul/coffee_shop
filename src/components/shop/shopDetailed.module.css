@@ -1,0 +1,83 @@
+.parent {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: red;
+  perspective: 10px;
+}
+
+.topSection {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  z-index: -1;
+  overflow: hidden;
+
+  transform: translateZ(-10px) scale(2.5);
+}
+.topSection img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.content {
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px;
+  margin: 0 50px;
+  transform: translateY(30vh);
+  max-height: 95vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 10px;
+
+  overscroll-behavior: none;
+}
+
+.content h4 {
+  font-size: 1.9em;
+}
+
+.shopDetails {
+  display: flex;
+  flex-direction: column;
+}
+.ratings {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.stars {
+  display: flex;
+  align-items: center;
+}
+.menuList {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.menuList span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 8px;
+  background-color: #edf0ef;
+  font-size: 1.2em;
+}
+
+/* --------------------------------------- */
+.itemsSold {
+  /* padding: 300px; */
+  overflow: auto;
+}
+.item {
+  padding: 30px;
+}
