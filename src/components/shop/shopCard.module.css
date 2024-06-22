@@ -1,0 +1,53 @@
+.parent {
+  /* background-color: red; */
+  width: fit-content;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 20px;
+}
+.imageContainer img {
+  width: 200px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.fav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  transform: translateX(30%) translateY(-30%);
+}
+
+.content h4 {
+  text-transform: capitalize;
+  font-family: "font_one_bold";
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+.star {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.distance {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  /* background-color: red; */
+  margin: auto;
+}
+.distance span {
+  /* background-color: green; */
+  margin-left: auto;
+  font-size: 0.8em;
+}
