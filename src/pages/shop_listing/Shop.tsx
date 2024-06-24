@@ -5,6 +5,7 @@ import Search from "../../components/search/Search";
 import ShopCard from "../../components/shop/ShopCard";
 import { IShopData } from "../../components/shop/ShopCard";
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 import { RotateSpinner } from "react-spinners-kit";
 
 const loadShopListing = async (
@@ -28,8 +29,12 @@ const loadShopListing = async (
 const Shops: React.FunctionComponent = () => {
   const [shopData, setShopData] = useState<IShopData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("q");
   useEffect(() => {
-    loadShopListing(0, setShopData, setLoading);
+    if (!query) {
+      loadShopListing(0, setShopData, setLoading);
+    }
   }, []);
   // const shopData: IShopData[] = [
   //   {
@@ -95,7 +100,7 @@ const Shops: React.FunctionComponent = () => {
     <div className={classes.parent}>
       <div className={classes.content}>
         <Navbar />
-        <Search />
+        <Search setShopData={setShopData} setLoading={setLoading} />
         <h3>Featured Coffee Shops</h3>
         <div className={classes.shops}>
           {loading ? (

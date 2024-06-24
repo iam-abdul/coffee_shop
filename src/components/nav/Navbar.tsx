@@ -1,5 +1,6 @@
 import women from "./../../assets/images/women.jpeg";
 import classes from "./navbar.module.css";
+
 const Navbar: React.FunctionComponent = () => {
   return (
     <div className={classes.parent}>

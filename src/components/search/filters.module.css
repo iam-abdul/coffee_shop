@@ -1,0 +1,14 @@
+.filterItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.filterItem select {
+  padding: 5px;
+  border-radius: 6px;
+}
+.filterItem span {
+  font-family: "font_one_bold";
+}

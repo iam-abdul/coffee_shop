@@ -25,7 +25,6 @@ const ShopCard: React.FunctionComponent<IShopData> = ({
   image,
   total_ratings,
   rating,
-  distance,
 }) => {
   const navigate = useNavigate();
   const openDetailedView = () => {
@@ -53,7 +52,7 @@ const ShopCard: React.FunctionComponent<IShopData> = ({
           <span>{abbreviateNumber(total_ratings)} ratings</span>
         </div>
         <div className={classes.distance}>
-          <span>{distance} miles</span>
+          {/* <span>{distance} miles</span> */}
         </div>
       </div>
     </div>
