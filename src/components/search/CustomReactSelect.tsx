@@ -24,7 +24,7 @@ const CustomReactSelect = () => {
       placeholder="search"
       styles={customStyles}
       components={components}
-      isClearable
+      isClearable={true}
       formatCreateLabel={(value) => `Search ${value}`}
       options={[]}
     />

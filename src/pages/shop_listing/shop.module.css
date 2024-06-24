@@ -18,4 +18,9 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  /* background-color: red; */
+}
+.shops div {
+  margin-left: auto;
+  margin-right: auto;
 }

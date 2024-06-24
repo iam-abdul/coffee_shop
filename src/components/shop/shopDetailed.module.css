@@ -1,10 +1,39 @@
+.loading {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itemsLoader {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  height: 100vh;
+}
+.notFound {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+.notFound h5 {
+  font-size: 1.3em;
+}
 .parent {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: red;
   perspective: 10px;
 }
 
@@ -30,7 +59,7 @@
   display: flex;
   flex-direction: column;
 
-  padding: 40px;
+  padding: 20px 40px;
   margin: 0 50px;
   transform: translateY(30vh);
   max-height: 95vh;
@@ -53,15 +82,18 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-top: 20px;
 }
 .stars {
   display: flex;
   align-items: center;
 }
 .menuList {
+  padding: 10px;
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: space-around;
 }
 .menuList span {
   display: flex;
@@ -69,15 +101,32 @@
   align-items: center;
   padding: 15px 30px;
   border-radius: 8px;
-  background-color: #edf0ef;
+  /* background-color: #edf0ef; */
+  border: 1px solid black;
   font-size: 1.2em;
+  cursor: pointer;
 }
 
 /* --------------------------------------- */
 .itemsSold {
   /* padding: 300px; */
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  /* background-color: green; */
 }
-.item {
-  padding: 30px;
+
+.location {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.active {
+  background-color: #f7ddb0;
+  /* color:; */
 }

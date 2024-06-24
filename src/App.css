@@ -16,3 +16,13 @@
 body {
   font-family: "font_one";
 }
+
+.logoShrink {
+  height: 100%;
+  transition: 2.5s;
+  height: 60px !important;
+}
+
+.css-b62m3t-container {
+  flex: 1;
+}

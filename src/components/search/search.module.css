@@ -5,10 +5,9 @@
   align-items: center;
   gap: 10px;
 }
-.searchBar div {
-  width: 100%;
+.searchBar:first-child {
+  flex: 1;
 }
-
 .searchBar .filterIcon {
   align-self: stretch;
   background-color: #003b40;
