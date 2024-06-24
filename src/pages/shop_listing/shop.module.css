@@ -24,3 +24,27 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (max-width: 650px) {
+  .parent {
+    padding: 10px;
+  }
+  .content {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .parent {
+    padding: 10px;
+  }
+  .content {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content h3 {
+    font-size: 0.95em;
+  }
+}

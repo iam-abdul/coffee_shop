@@ -32,3 +32,43 @@
 .price {
   font-family: "font_one_bold";
 }
+
+@media screen and (max-width: 900px) {
+  .content h4 {
+    font-size: 1.1em;
+  }
+  .imageContainer img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .content h4 {
+    font-size: 1em;
+  }
+  .content p {
+    font-size: 0.9em;
+  }
+  .imageContainer img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .parent {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .imageContainer img {
+    height: 100%;
+  }
+
+  .content h4 {
+    font-size: 0.9em;
+  }
+
+  .content p {
+    font-size: 0.8em;
+  }
+}

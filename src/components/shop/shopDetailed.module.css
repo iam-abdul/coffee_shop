@@ -130,3 +130,69 @@
   background-color: #f7ddb0;
   /* color:; */
 }
+
+@media screen and (max-width: 900px) {
+  .content {
+    margin: 0px 30px;
+    padding: 10px 20px;
+  }
+  .content h4 {
+    font-size: 1.5em;
+  }
+  .content p {
+    font-size: 0.92em;
+  }
+  .ratings {
+    margin-top: 10px;
+    font-size: 0.92em;
+  }
+  .menuList {
+    margin-top: 15px;
+  }
+
+  .menuList span {
+    padding: 10px 15px;
+    font-size: 0.92em;
+  }
+
+  .itemsSold {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .content h4 {
+    font-size: 1.2em;
+  }
+
+  .content p {
+    font-size: 0.9em;
+  }
+
+  .menuList {
+    margin-top: 10px;
+  }
+
+  .menuList span {
+    padding: 8px 12px;
+  }
+  .itemsSold {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    margin: 10px;
+  }
+  .content p {
+    font-size: 0.86em;
+  }
+
+  .menuList {
+    margin-top: 5px;
+  }
+  .menuList span p {
+    display: none;
+  }
+}
