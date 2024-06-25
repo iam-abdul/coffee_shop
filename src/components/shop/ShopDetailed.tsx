@@ -12,6 +12,7 @@ import axios from "axios";
 import notFound from "./../../assets/images/not_found.svg";
 import { IoLocationSharp } from "react-icons/io5";
 import { useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface IShopDetails {
   name: string;
@@ -21,6 +22,8 @@ interface IShopDetails {
   image: string;
   rating: number;
   city: string;
+  lat: number;
+  long: number;
 }
 
 interface IItems {
@@ -38,7 +41,7 @@ const loadShopDetails = async (
   try {
     setLoadingShop(true);
     const response = await axios.get(
-      "http://localhost:3090/api/v1/shops/shop?id=" + shopId
+      import.meta.env.VITE_BACKEND_URL + "/shops/shop?id=" + shopId
     );
 
     setShopDetails(response.data.shop);
@@ -57,7 +60,8 @@ const loadShopItems = async (
   try {
     setLoadingItems(true);
     const response = await axios.get(
-      "http://localhost:3090/api/v1/shops/items?type=" +
+      import.meta.env.VITE_BACKEND_URL +
+        "/shops/items?type=" +
         type +
         "&shop=" +
         shopId
@@ -81,6 +85,7 @@ const ShopDetailed: React.FunctionComponent = () => {
   const [items, setItems] = useState<IItems[]>([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const [active, setActive] = useState<"COFFEE" | "DRINKS" | "FOOD">("COFFEE");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const active = searchParams.get("list");
@@ -200,6 +205,12 @@ const ShopDetailed: React.FunctionComponent = () => {
     setSearchParams("list=FOOD");
   };
 
+  const openMaps = () => {
+    navigate(
+      `map?lat=${shopDetails.lat}&long=${shopDetails.long}&name=${shopDetails.name}`
+    );
+  };
+
   // if (loadingItems || !items) {
   //   return (
   //     <div className={classes.loading}>
@@ -224,8 +235,8 @@ const ShopDetailed: React.FunctionComponent = () => {
             </span>
 
             <span>{shopDetails.total_ratings} ratings</span>
-            <div className={classes.location}>
-              <IoLocationSharp /> <p>{shopDetails.city}</p>
+            <div onClick={openMaps} className={classes.location}>
+              <IoLocationSharp /> <p>View On Maps</p>
             </div>
           </div>
         </div>

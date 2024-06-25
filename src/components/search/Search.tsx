@@ -18,15 +18,14 @@ interface ISearchProps {
 const loadSearch = async (
   setShopData: (s: IShopData[]) => void,
   setLoading: (b: boolean) => void,
-  setFilters: (f: string) => void,
-  setShowFilters: (b: boolean) => void,
   query: string,
   filters: string
 ) => {
   try {
     setLoading(true);
     const response = await axios.get(
-      "http://localhost:3090/api/v1/shops/search?q=" +
+      import.meta.env.VITE_BACKEND_URL +
+        "/shops/search?q=" +
         query +
         "&filters=" +
         filters
@@ -72,11 +71,22 @@ const Search: React.FunctionComponent<ISearchProps> = ({
       loadSearch(
         setShopData,
         setLoading,
-        setFilters,
-        setShowFilters,
+        // setFilters,
+        // setShowFilters,
         query,
         finalString
       );
+    } else {
+      if (query) {
+        loadSearch(
+          setShopData,
+          setLoading,
+          // setFilters,
+          // setShowFilters,
+          query,
+          "&sort=name&order=asc&items=FOOD,COFFEE,DRINKS,"
+        );
+      }
     }
   }, [sort, order, items, query]);
 

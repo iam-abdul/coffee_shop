@@ -16,7 +16,7 @@ const loadShopListing = async (
   try {
     setLoading(true);
     const stores = await axios.get(
-      "http://localhost:3090/api/v1/shops/list?page" + page
+      import.meta.env.VITE_BACKEND_URL + "/shops/list?page" + page
     );
 
     setShopData(stores.data.shops);
